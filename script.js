@@ -40,7 +40,7 @@ document.getElementById("registroForm").addEventListener("submit", function (e) 
   // Verificar si el correo ya está registrado
   const existe = usuarios.find(user => user.correo === correo);
   if (existe) {
-    mensaje.textContent = "Este correo ya está registrado. ¿Deseas iniciar sesión?";
+    mensaje.innerHTML = "⚠️ Este correo ya está registrado. ¿Deseas <a href='login.html' style='color:blue; text-decoration:underline;'>iniciar sesión</a>?";
     mensaje.style.color = "orange";
     return;
   }
