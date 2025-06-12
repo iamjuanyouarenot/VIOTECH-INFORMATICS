@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+input, label, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#mensaje {
+  margin-top: 20px;
+  font-weight: bold;
+}
