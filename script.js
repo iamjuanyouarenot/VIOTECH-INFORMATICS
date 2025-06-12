@@ -59,6 +59,9 @@ document.getElementById("registroForm").addEventListener("submit", function (e) 
 
   mensaje.textContent = "Registro exitoso.";
   mensaje.style.color = "green";
+setTimeout(() => {
+  window.location.href = "login.html";
+}, 2000);  // espera 2 segundos antes de redirigir
 
   // Limpiar formulario
   document.getElementById("registroForm").reset();
