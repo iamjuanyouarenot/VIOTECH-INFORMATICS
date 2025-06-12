@@ -3,10 +3,10 @@ document.getElementById("registroForm").addEventListener("submit", function (e) 
 
   const nombres = document.getElementById("nombres").value.trim();
   const apellidos = document.getElementById("apellidos").value.trim();
-  const correo = document.getElementById("correo electronico").value.trim().toLowerCase();
+  const correo = document.getElementById("correo_electronico").value.trim().toLowerCase(); // <-- Corregido
   const telefono = document.getElementById("telefono").value.trim();
   const password = document.getElementById("contraseña").value;
-  const confirmPassword = document.getElementById("confirmar contraseña").value;
+  const confirmPassword = document.getElementById("confirmar_contraseña").value; // <-- Corregido
   const mensaje = document.getElementById("mensaje");
 
   // Validaciones básicas
@@ -57,11 +57,12 @@ document.getElementById("registroForm").addEventListener("submit", function (e) 
   usuarios.push(nuevoUsuario);
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-  mensaje.textContent = "Registro exitoso.";
+  mensaje.textContent = "✅ Registro exitoso. Redirigiendo...";
   mensaje.style.color = "green";
-setTimeout(() => {
-  window.location.href = "login.html";
-}, 2000);  // espera 2 segundos antes de redirigir
+
+  setTimeout(() => {
+    window.location.href = "login.html";
+  }, 2000);  // espera 2 segundos antes de redirigir
 
   // Limpiar formulario
   document.getElementById("registroForm").reset();
